@@ -4,7 +4,7 @@ from Abstracts import AbstractEquation, AbstractNumericalMethod
 
 # Model
 class Solver:
-    # Constructor for
+    # Constructor for solver instance
     def __init__(self, method: AbstractNumericalMethod, eq: AbstractEquation):
         self.method: AbstractNumericalMethod = method
         self.eq: AbstractEquation = eq
@@ -26,7 +26,7 @@ class Solver:
         self.y_axis_method[0] = self.eq.y0
 
     # Fill the arrays with values
-    def solve(self, ni: int, step: float):  # TODO: If we need only GTE it's not effective
+    def solve(self, ni: int, step: float):
         self.set_axis_size(ni + 1)
 
         for i in range(1, ni + 1):
