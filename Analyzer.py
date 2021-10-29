@@ -6,7 +6,6 @@ from Solver import Solver
 
 # View
 class Analyzer:
-
     def __init__(self, methods, eq: AbstractEquation):
         self.eq = eq
         self.solvers = []
@@ -29,8 +28,6 @@ class Analyzer:
         if True in cbs:
             plot.grid()
             plot.legend()
-        else:
-            plot.axis('off')
 
     def plot_lte(self, plot, cbs):
         for i, solver in enumerate(self.solvers):
@@ -40,8 +37,6 @@ class Analyzer:
         if True in cbs[1:]:
             plot.grid()
             plot.legend()
-        else:
-            plot.axis('off')
 
     def plot_gte(self, start: int, stop: int, plot, cbs):
         for i, solver in enumerate(self.solvers):
@@ -64,5 +59,3 @@ class Analyzer:
         if True in cbs[1:]:
             plot.grid()
             plot.legend()
-        else:
-            plot.axis('off')
