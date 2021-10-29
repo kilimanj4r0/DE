@@ -1,0 +1,2 @@
+class WasNotSolvedYet:
+    pass
